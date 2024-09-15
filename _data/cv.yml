@@ -1,30 +1,30 @@
-- title: General Information
+- title: Informações Gerais
   type: map
   contents:
-    - name: Full Name
+    - name: Nome Completo
       value: Victor Gabriel Soares Carvalho
-    - name: Date of Birth
+    - name: Data de Nascimento
       value: 20 de Junho de 2004
-    - name: Languages
-      value: Brasilian Portuguese, English
+    - name: Línguas
+      value: Português Brasileiro, Inglês
 
-- title: Education
+- title: Educação
   type: time_table
   contents:
-    - title: Audiovisual Production Technician
+    - title: Técnico em Produção Áudiovisual
       institution: Instituto Federal de Brasília, Brazil
       year: 2019 - 2023
-    - title: Eletronic Engineer
+    - title: Engenharia Eletrônica
       institution: Universidade de Brasília, Brazil
-      year: 2024 - now
+      year: 2024 - atual
 
-- title: Projects
+- title: Projetos
   type: time_table
   contents:
     - title: BikeVR - Cinema Multissensorial
       year: 2022-2024
       description: Uma experiência imersiva de curta-metragens em 360 graus, combinando realidade virtual com estímulos físicos.
-- title: Academic Interests
+- title: Interesses Acadêmicos
   type: nested_list
   contents:
     - title: Eletrônica Geral
@@ -32,7 +32,7 @@
         - Automação.
         - Robótica.
 
-- title: Other Interests
+- title: Outros Interesses
   type: list
   contents:
     - <u>Hobbies:</u> Fâ ávido de Drum and Bass. Amante de jogos de corrida e JRPGs.
