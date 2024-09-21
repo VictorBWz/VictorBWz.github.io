@@ -17,12 +17,16 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+    {% assign month_names = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: ", " %}
+    {% assign month = page.date | date: "%m" | minus: 1 %}
+
     <p class="post-meta">
-      Criado em {{ page.date | date: '%d' }} de {{ page.date | date: '%B' }} de {{ page.date | date: '%Y' }}
-      {% if page.author %}by {{ page.author }}{% endif %}
-      {% if page.last_updated %}, última atualização em {{ page.last_updated | date: '%d' }} de {{ page.last_updated | date: '%B' }} de {{ page.last_updated | date: '%Y' }}{% endif %}
-      {% if page.meta %}• {{ page.meta }}{% endif %}
-    </p>
+     Criado em {{ page.date | date: '%d' }} de {{ month_names[month] }} de {{ page.date | date: '%Y' }}
+     {% if page.author %} por {{ page.author }}{% endif %}
+     {% if page.last_updated %}, última atualização em {{ page.last_updated | date: '%d' }} de {{ month_names[page.last_updated | date: "%m" | minus: 1] }} de {{ page.last_updated | date: '%Y' }}{% endif %}
+     {% if page.meta %}• {{ page.meta }}{% endif %}
+   </p>
+
     <p class="post-tags">
       {% if url_beginning == '/blog/' %}
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
