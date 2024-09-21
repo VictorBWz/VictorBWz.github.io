@@ -144,7 +144,7 @@ pagination:
         {{ read_time }} mins de leitura &nbsp; &middot; &nbsp;
         {% assign month_names = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: ", " %}
         {% assign month = post.date | date: "%m" | minus: 1 %}
-        {{ month_names[month] }} {{ post.date | date: "%d, %Y" }}
+        {{ post.date | date: "%d de month_names[month], %Y" }}
 
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
