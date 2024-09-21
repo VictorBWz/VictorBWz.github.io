@@ -142,7 +142,10 @@ pagination:
       <p>{{ post.description }}</p>
       <p class="post-meta">
         {{ read_time }} mins de leitura &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%d de %B, %Y' }}
+        {% assign month_names = "janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro" | split: ", " %}
+        {% assign month = post.date | date: "%m" | minus: 1 %}
+        {{ month_names[month] }} {{ post.date | date: "%d, %Y" }}
+
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}
