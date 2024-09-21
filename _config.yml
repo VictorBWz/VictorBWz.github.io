@@ -204,6 +204,7 @@ keep_files:
 
 # Plug-ins
 plugins:
+  - jekyll-multiple-languages-plugin
   - jekyll-archives
   - jekyll-email-protect
   - jekyll-feed
